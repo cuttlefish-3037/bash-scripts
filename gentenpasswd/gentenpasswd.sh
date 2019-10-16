@@ -14,4 +14,4 @@
 # use diceware (http://world.std.com/~reinhold/diceware.html) if you
 # want secure and easy to remember passwords
 
-tr -cd '[:alnum:]' < /dev/urandom | fold -w $1 | head -n10
+tr -cd [:alnum:] < /dev/urandom | fold -w $1 | head -n10
