@@ -5,7 +5,8 @@ useful to someone else.
 
 script | application
 -------|------------
-total-pdf-pages | count the total number of pages in multiple pdf files
+total-pdf-pages | Count the total number of pages in multiple pdf files
+gentenpasswd | Generate ten random alphanumeric passwords
 
 Some links to make my life easier:
 * [Git Handbook](https://guides.github.com/introduction/git-handbook/)
