@@ -1,14 +1,13 @@
 #!/bin/bash
 
-# For an odd number of pages we count one extra page. To print 5 pages
-# you need 3 sheets of paper. That is why the cnt (counter) variable
-# is there.
+# For an odd number of pages we count one extra page. For double sided
+# printing of 5 pages you need 3 sheets of paper. That is why the cnt
+# (counter) variable is there.
 
 # sum holds the amount of pages
-# sum + cnt is the number of sheets of paper you need when using one sided printing
 # divide sum + cnt by 2 to get the number of sheets you need when using double sided printing
 
 for i in *.pdf
 do
     pdfinfo $i
-done | grep Pages | awk -F\: 'BEGIN {sum = 0; cnt = 0} {if ($2 % 2 == 1) cnt += 1; sum += $2} END {print sum; print cnt; print sum + cnt}'
+done | grep Pages | awk -F\: 'BEGIN {sum = 0; cnt = 0} {if ($2 % 2 == 1) cnt += 1; sum += $2} END {print "Total pages (single sided printing): ", sum; print "Double sided printing: " (sum + cnt) / 2}'
