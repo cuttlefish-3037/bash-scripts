@@ -1,4 +1,5 @@
 #!/bin/bash
+# Generate ten random passwords
 
 # this script expects an int as argument
 
